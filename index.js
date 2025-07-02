@@ -29,7 +29,7 @@ const lista = document.getElementById('lista-turnos');
 const nombre = localStorage.getItem("usuarioLogueado");
 
 if (!nombre) {
-  window.location.href = "login/login.js";
+  window.location.href = "login/login.html";
 }
 document.getElementById("nombre-mostrado").textContent = `Nombre: ${nombre}`;
 
