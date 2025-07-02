@@ -22,10 +22,9 @@
   </style>
 </head>
 
-<body
-  class="bg-pink-900 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors min-h-screen flex items-center justify-center">
+<body class="bg-pink-900 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors min-h-screen flex items-center justify-center">
 
-  <main class="w-full max-w-sm bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+  <main class="w-full max-w-md sm:max-w-sm bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
     <h1 class="text-3xl font-bold text-center text-pink-600 dark:text-pink-400 mb-6">Estética Bella</h1>
     <h2 class="text-xl font-semibold text-center mb-4">
       Registro de Usuario
@@ -36,23 +35,22 @@
     </h2>
 
     <form id="registroForm" class="space-y-4">
-      <div id="nobre-apellido" class="flex gap-3">
-        <div>
+      <div id="nombre-apellido" class="flex flex-col sm:flex-row sm:gap-3">
+        <div class="w-full">
           <label for="nombre" class="block text-sm mb-1">Nombre</label>
           <input type="text" id="nombre"
             class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700" required>
         </div>
 
-        <div>
+        <div class="w-full mt-4 sm:mt-0">
           <label for="apellido" class="block text-sm mb-1">Apellido</label>
           <input type="text" id="apellido"
             class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700" required>
         </div>
       </div>
       
-
-      <div id="nacimiento-sexo" class="flex gap-2">
-        <div>
+      <div id="nacimiento-sexo" class="flex flex-col sm:flex-row sm:gap-2">
+        <div class="w-full">
           <label for="sexo" class="block text-sm mb-1">Sexo</label>
           <select id="sexo"
             class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700" required>
@@ -63,7 +61,7 @@
           </select>
         </div>
 
-        <div>
+        <div class="w-full mt-4 sm:mt-0">
           <label for="fechaNacimiento" class="block text-sm mb-1">Fecha de Nacimiento</label>
           <input type="date" id="fechaNacimiento"
             class="w-full p-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700" required>
@@ -91,11 +89,13 @@
       <button type="submit"
         class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition">Registrarse</button>
     </form>
-    <div class="border bt-gray-800 m-4"></div>
-    <a href="../login/login.html" class="flex justify-center aling-center bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition">Iniciar seccion</a>
+
+    <div class="border bt-gray-800 my-4"></div>
+    <a href="../login/login.html" class="flex justify-center items-center bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition">Iniciar sesión</a>
 
     <div id="registroAlert" class="hidden mt-4 text-sm text-center text-green-500">¡Registro exitoso!</div>
   </main>
-    <script src="registro.js"></script>
+
+  <script src="registro.js"></script>
 </body>
 </html>
