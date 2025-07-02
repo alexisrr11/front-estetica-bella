@@ -109,5 +109,5 @@ cancelar.addEventListener("click", () => {
 
 confirmar.addEventListener("click", () => {
   localStorage.removeItem("usuarioLogueado");
-  window.location.href = "../login.html";
+  window.location.href = "../login/login.html";
 });
