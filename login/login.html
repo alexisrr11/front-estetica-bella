@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login - Estética Bella</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -12,29 +13,30 @@
   </script>
   <style>
     body {
-	background: 
-		  linear-gradient(135deg,#0000 20.5%,#c5c5ce 0 29.5%,#0000 0) 0 31.5px,
-		  linear-gradient( 45deg,#0000 8%,#c5c5ce 0 17%, #0000 0 58%) 63px 0,
-		  linear-gradient(135deg,#0000 8%,#c5c5ce 0 17%, #0000 0 58%,#c5c5ce 0 67%,#0000 0),        
-		  linear-gradient( 45deg,#0000 8%,#c5c5ce 0 17%, #0000 0 58%,#c5c5ce 0 67%,#0000 0 83%,#c5c5ce 0 92%,#0000 0),
-		  #863c78;
-	background-size: 126px 126px;
-}
+      background: 
+        linear-gradient(135deg, #0000 20.5%, #c5c5ce 0 29.5%, #0000 0) 0 31.5px,
+        linear-gradient(45deg, #0000 8%, #c5c5ce 0 17%, #0000 0 58%) 63px 0,
+        linear-gradient(135deg, #0000 8%, #c5c5ce 0 17%, #0000 0 58%, #c5c5ce 0 67%, #0000 0),
+        linear-gradient(45deg, #0000 8%, #c5c5ce 0 17%, #0000 0 58%, #c5c5ce 0 67%, #0000 0 83%, #c5c5ce 0 92%, #0000 0),
+        #863c78;
+      background-size: 126px 126px;
+    }
   </style>
 </head>
 
 <body
-  class="bg-pink-900 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors min-h-screen flex items-center justify-center">
+  class="bg-pink-900 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors min-h-screen flex items-center justify-center px-4">
 
-  <main class="w-full max-w-sm bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+  <main class="w-full max-w-sm bg-gray-100 dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg">
     <h1 class="text-3xl font-bold text-center text-pink-600 dark:text-pink-400 mb-6">Estética Bella</h1>
-    <h2 class="text-xl font-semibold text-center mb-4">
-      Iniciar sesión
+
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Iniciar sesión</h2>
       <button id="modoOscuroBtn"
-        class="bg-gray-900 dark:bg-gray-700 dark:text-white text-pink-600 rounded-lg shadow hover:scale-105 transition">
+        class="bg-gray-900 dark:bg-gray-700 dark:text-white text-pink-600 rounded-lg p-2 shadow hover:scale-105 transition">
         🌙
       </button>
-    </h2>
+    </div>
 
     <form id="loginForm" class="space-y-4">
       <div>
@@ -52,13 +54,15 @@
       <button type="submit"
         class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition">Entrar</button>
     </form>
-    
-    <div class="border bt-gray-800 m-4"></div>
 
-    <a href="../usuarios/registro.html" class="flex justify-center aling-center bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition">Crear Usuario</a>
+    <div class="border-t border-gray-300 dark:border-gray-700 my-4"></div>
+
+    <a href="../usuarios/registro.html"
+      class="flex justify-center items-center bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition text-center">Crear Usuario</a>
 
     <div id="loginAlert" class="hidden mt-4 text-sm text-center text-red-500">Credenciales incorrectas</div>
   </main>
+
   <script type="module" src="/login.js"></script>
 </body>
 
